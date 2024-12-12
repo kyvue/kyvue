@@ -3,7 +3,7 @@ FROM python:3.9-slim
 
 # Set environment variables
 ENV PYTHONUNBUFFERED=1 \
-    FLASK_APP=kyvue_collector.app
+    FLASK_APP=kyvue.app
 
 # Set the working directory
 WORKDIR /app

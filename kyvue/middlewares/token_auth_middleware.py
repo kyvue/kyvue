@@ -1,5 +1,5 @@
 from flask import request, abort
-from kyvue_collector.configs.env_loader import SECRET_TOKEN
+from kyvue.configs.env_loader import SECRET_TOKEN
 
 
 def check_secret_token():

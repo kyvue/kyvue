@@ -1,5 +1,5 @@
 from flask import request, abort
-from kyvue_collector.configs.env_loader import ALLOWED_HOSTS
+from kyvue.configs.env_loader import ALLOWED_HOSTS
 
 def check_trusted_server():
     """

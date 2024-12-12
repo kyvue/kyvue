@@ -1,4 +1,4 @@
-from kyvue_collector.app import app
+from kyvue.app import app
 
 if __name__ == "__main__":
     # Run the Flask application with debug mode enabled
