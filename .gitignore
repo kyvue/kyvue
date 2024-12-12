@@ -122,3 +122,8 @@ pyrightconfig.json
 # System files
 .DS_Store
 Thumbs.db
+
+
+# venv
+venv
+env

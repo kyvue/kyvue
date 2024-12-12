@@ -9,7 +9,7 @@ app = Flask(__name__)
 
 
 # Allowed endpoints
-ALLOWED_ENDPOINTS = ['/metrics']
+ALLOWED_ENDPOINTS = ['/metrics', '/health']
 
 
 # Register middleware
@@ -29,7 +29,7 @@ def forbidden_error(e):
     """
     return jsonify({
         "status_code": "forbidden_error",
-        "message": "Access to this endpoint is forbidden. Only /metrics is allowed."
+        "message": "Access to this endpoint is forbidden. Only /metrics and /health are allowed."
     }), 403
 
 
@@ -64,6 +64,17 @@ def metrics():
     }
 
     return jsonify(response_data)
+
+
+@app.route('/health', methods=['GET'])
+def health_check():
+    """
+    API endpoint to check the health of the application.
+    """
+    return jsonify({
+        "status": "healthy",
+        "message": "The application is running smoothly."
+    })
 
 
 if __name__ == "__main__":
